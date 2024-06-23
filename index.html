@@ -3,24 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Одностраничный сайт</title>
+    <title>SBGames - Mobile Game Development Studio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
+            background: #f0f8ff; /* Светлый цвет фона */
+            color: #333;
         }
         header {
-            background: #4CAF50;
+            background: url('data/header.png') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 3em 0;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
             color: white;
             text-align: center;
             padding: 1em;
+            text-decoration: none;
         }
-        section {
+        nav a:hover {
+            background: rgba(87, 87, 87, 0.7);
+        }
+        .content {
             padding: 2em;
         }
+        .content h2 {
+            text-align: center;
+        }
+        .content .section {
+            margin: 2em 0;
+        }
         footer {
-            background: #333;
+            background: rgba(0, 0, 0, 0.7);
             color: white;
             text-align: center;
             padding: 1em;
@@ -32,14 +59,32 @@
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать на наш сайт</h1>
+        <h1>SBGames</h1>
+        <p>Your Mobile Game Development Studio</p>
     </header>
-    <section>
-        <h2>О нас</h2>
-        <p>Это пример одностраничного сайта. Вы можете добавить сюда любую информацию.</p>
-    </section>
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#game">Our Game</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <div class="content">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>Welcome to Pixel Five, where we bring your mobile game ideas to life. Our team of expert developers and designers are dedicated to creating engaging and immersive mobile gaming experiences. Whether you're looking for game design, development, or marketing, we've got you covered.</p>
+        </section>
+        <section id="game" class="section">
+            <h2>Our Game</h2>
+<!--            <p>Check out our latest game: <a href="https://example.com" style="color: #4CAF50; text-decoration: none;">Hamster Combat</a>. Experience the thrill of the battle with adorable hamsters!</p>-->
+        </section>
+        <section id="contact" class="section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to start a project with us, feel free to reach out.</p>
+            <p>Email: info@pixelfive.org</p>
+            <p>Phone: +123 456 7890</p>
+        </section>
+    </div>
     <footer>
-        <p>&copy; 2024 Все права защищены</p>
+        <p>&copy; 2024 Pixel Five. All rights reserved.</p>
     </footer>
 </body>
 </html>
