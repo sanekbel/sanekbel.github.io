@@ -5,68 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Five - Mobile Game Development Studio</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f0f8ff;
-            color: #333;
+            background-color: #1a1a1a;
+            color: #fff;
+            overflow-x: hidden;
         }
         header {
-            background: url('data/header.png') no-repeat center center/cover;
+            background: url('/data/img.png') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 3em 0;
-        }
-        header h1 {
-            font-size: 3em;
-            margin: 0;
-        }
-        nav {
-            background: rgba(0, 0, 0, 0.7);
+            padding: 10em 0;
+            position: relative;
             overflow: hidden;
         }
+        header h1 {
+            font-size: 4em;
+            margin: 0;
+            animation: fadeInDown 2s ease-in-out;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5em;
+        }
+        header p {
+            font-size: 1.5em;
+            animation: fadeInUp 2s ease-in-out;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5em;
+        }
+        nav {
+            background: #111;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
         nav a {
-            float: left;
-            display: block;
+            display: inline-block;
             color: white;
             text-align: center;
-            padding: 1em;
+            padding: 1em 2em;
             text-decoration: none;
+            transition: background 0.3s;
         }
         nav a:hover {
-            background: rgba(87, 87, 87, 0.7);
+            background: #444;
         }
         .content {
-            padding: 2em;
+            padding: 5em 2em;
         }
         .content h2 {
             text-align: center;
+            font-size: 3em;
+            margin-bottom: 1em;
+            color: #4CAF50;
         }
         .content .section {
-            margin: 2em 0;
+            margin: 3em 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .content p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .content a {
+            color: #4CAF50;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .content a:hover {
+            color: #388E3C;
+        }
+        .gallery {
+            display: flex;
+            overflow-x: auto;
+            padding: 1em;
+            background: #111;
+        }
+        .gallery img {
+            height: 200px;
+            margin-right: 1em;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
         }
         footer {
-            background: rgba(0, 0, 0, 0.7);
+            background: #111;
             color: white;
             text-align: center;
             padding: 1em;
-            position: fixed;
-            width: 100%;
+            position: relative;
             bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Pixel Five</h1>
-        <p>Your Mobile Game Development Studio</p>
-    </header>
     <nav>
         <a href="#about">About Us</a>
         <a href="#game">Our Game</a>
         <a href="#contact">Contact</a>
     </nav>
+    <header>
+        <h1>Pixel Five</h1>
+        <p>Your Mobile Game Development Studio</p>
+    </header>
     <div class="content">
         <section id="about" class="section">
             <h2>About Us</h2>
@@ -74,7 +152,8 @@
         </section>
         <section id="game" class="section">
             <h2>Our Game</h2>
-<!--            <p>Check out our latest game: <a href="https://example.com" style="color: #4CAF50; text-decoration: none;">Hamster Combat</a>. Experience the thrill of the battle with adorable hamsters!</p>-->
+<!--            <p>Check out our latest game: <a href="https://example.com">Hamster Combat</a>. Experience the thrill of the battle with adorable hamsters!</p>-->
+            <p>WIP</p>
         </section>
         <section id="contact" class="section">
             <h2>Contact Us</h2>
@@ -83,6 +162,11 @@
 <!--            <p>Phone: +123 456 7890</p>-->
         </section>
     </div>
+<!--    <div class="gallery">-->
+<!--        <img src="/data/A_vibrant_and_engaging_mobile_game_scene_with_colo.png" alt="Game Scene 1">-->
+<!--        <img src="/data/A_vibrant_and_engaging_mobile_game_scene_with_colo.png" alt="Game Scene 2">-->
+<!--        <img src="/data/A_vibrant_and_engaging_mobile_game_scene_with_colo.png" alt="Game Scene 3">-->
+<!--    </div>-->
     <footer>
         <p>&copy; 2024 Pixel Five. All rights reserved.</p>
     </footer>
